@@ -24,10 +24,11 @@ Start your online [posts](https://riceball-tw.github.io/dong/zh-tw/post/) or [sh
 - Optimize for speed (100% lighthouse score)
 - Responsive & SEO-friendly
 - Built-in i18n
+- Open Graph image generation through [vercel/og](https://vercel.com/docs/og-image-generation) with cache
+- Page search through [Pagefind](https://pagefind.app/)
+- Google Analytic
 - CI pipeline (TypeScript / [Biome linter](https://biomejs.dev/) / [Cypress E2E testing](https://www.cypress.io/) / [Lighthouse](https://github.com/GoogleChrome/lighthouse))
 - CD pipeline ([Cloudflare Pages](https://pages.cloudflare.com/) or [GitHub Pages](https://pages.github.com/))
-- Build time Open Graph image generation
-- Build time Page search
 
 ## Getting Started
 
@@ -44,17 +45,6 @@ pnpm install
 pnpm run dev
 ```
 
-## Customization
-
-1. `astro.config.mjs`: Astro configs
-    - `site`: Your final, deployed URL
-2. `/src/content`: Site config, posts, shortposts
-3. `/src/i18n`: Translation used in astro templates
-4. `/public`: Assets used in the site (favicon, og image)
-5. `/src/assets`: Assets used in the site (logo, logomark)
-6. `/src/styles/global.css`: Styles
-7. `/.github/workflows/testing-and-deploy-pipeline.yml`: GitHub CI/CD pipeline (You should setup env base on `.env.example`)
-
 ### Build
 
 ```bash
@@ -68,6 +58,17 @@ pnpm preview
 docker build -t <your-astro-image-name> .
 docker run -p <local-port>:<container-port> <your-astro-image-name>
 ```
+
+### Customization
+
+1. `astro.config.mjs`: Astro configs
+    - `site`: Your final, deployed URL
+2. `/src/content`: Site config, posts, shortposts (Markdown / MDX)
+3. `/src/i18n`: Translations used in astro templates
+4. `/public`: Assets used in the site (favicon, og image)
+5. `/src/assets`: Assets used in the site (logo, logomark)
+6. `/src/styles/global.css`: Styles
+7. `/.github/workflows/testing-and-deploy-pipeline.yml`: GitHub CI/CD pipeline (setup `.env` base on `.env.example`)
 
 ## Helping out
 
