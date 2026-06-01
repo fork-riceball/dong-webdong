@@ -1,4 +1,4 @@
-import { z } from "astro:content";
+import { z } from "astro/zod";
 import uniqolor from "uniqolor";
 
 function getDefaultColor() {
@@ -51,7 +51,7 @@ export const websiteSchema = z.object({
 		slogan: z.string(),
 		description: z.string(),
 		themeColor: z.string(),
-		email: z.string().email(),
+		email: z.email(),
 		thumbnail: z.object({
 			width: z.number(),
 			height: z.number(),
@@ -60,36 +60,36 @@ export const websiteSchema = z.object({
 		}),
 		copyright: z.object({
 			title: z.string(),
-			url: z.string(),
+			url: z.url(),
 		}),
 		socials: z.array(
 			z.object({
 				name: z.string(),
 				iconName: z.string(),
-				url: z.string(),
+				url: z.url(),
 			}),
 		),
 		author: z
 			.object({
 				name: z.string(),
-				url: z.string().optional(),
+				url: z.url(),
 			})
 			.optional(),
 		publisher: z
 			.object({
 				name: z.string(),
-				url: z.string().optional(),
+				url: z.url(),
 			})
 			.optional(),
 		supportMe: z.object({
-			githubUrl: z.string().url(),
+			githubUrl: z.url(),
 		}),
 	}),
 	navigation: z.array(
 		z.object({
 			iconName: z.string(),
 			name: z.string(),
-			url: z.string(),
+			url: z.url()
 		}),
 	),
 });
