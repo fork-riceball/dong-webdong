@@ -25,15 +25,17 @@ Object.keys(languages).forEach((locale) => {
 
 			// <link rel="alternate" hreflang="x" href="y"> should exist and correct
 			// Expected format: site + base + locale + /   e.g. https://riceball-tw.github.io/dong/zh-tw/
+			const expectedHref = (locale: string) =>
+				new URL(`${basePath.replace(/\/$/, "")}/${locale}/`, baseUrl).toString();
 			cy.get(`link[rel="alternate"][hreflang="x-default"]`).should(
 				"have.attr",
 				"href",
-				`${baseUrl}${basePath}${defaultLocale}/`,
+				expectedHref(defaultLocale),
 			);
 			cy.get(`link[rel="alternate"][hreflang="${locale}"]`).should(
 				"have.attr",
 				"href",
-				`${baseUrl}${basePath}${locale}/`,
+				expectedHref(locale),
 			);
 		});
 
