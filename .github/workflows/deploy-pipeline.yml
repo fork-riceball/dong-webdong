@@ -26,6 +26,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ! To seperate code & content, you can overwrite local content from below
+      # ! Add GitHub secrets named: CHECKOUT_GITHUB_CONTENT_PAT
+      # ! - Permission: Target content repo's Content READ and Write
       # - name: Checkout external content
       #   uses: actions/checkout@v4
       #   with:
@@ -104,7 +107,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # deploy:
+  # deploy-cloudflare-pages:
   #   needs: build
   #   runs-on: ubuntu-latest
   #   permissions:

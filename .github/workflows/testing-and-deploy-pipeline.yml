@@ -39,10 +39,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ! To seperate code & content, you can overwrite local content from below
+      # ! Add GitHub secrets named: CHECKOUT_GITHUB_CONTENT_PAT
+      # ! - Permission: Target content repo's Content READ and Write
       # - name: Checkout external content
       #   uses: actions/checkout@v4
       #   with:
-      #     repository: riceball-tw/obsidian-sync
+      #     repository: organization/repo
       #     ref: main
       #     path: src/content-temp/
       #     token: ${{ secrets.CHECKOUT_GITHUB_CONTENT_PAT }}
@@ -188,7 +191,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # deploy:
+  # deploy-cloudflare-pages:
   #   needs: lighthouse
   #   runs-on: ubuntu-latest
   #   permissions:
