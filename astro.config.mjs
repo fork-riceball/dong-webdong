@@ -35,12 +35,14 @@ export default defineConfig({
 	base: finalBase,
 	// !IMPORTANT: Set site url property with your own domain
 	site: baseUrl,
-	remotePatterns: [
-		{
-			protocol: "https",
-			hostname: "bucket-webdong.webdong.dev",
-		},
-	],
+	image: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "bucket-webdong.webdong.dev",
+			},
+		],
+	},
 	redirects: {
 		"/": `${finalBase}${defaultLocale}/`,
 		"/post/": `${finalBase}${defaultLocale}/post/`,
