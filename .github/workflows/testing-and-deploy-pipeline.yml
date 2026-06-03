@@ -41,7 +41,7 @@ jobs:
 
       # ! To seperate code & content, you can overwrite local content from below
       # ! Add GitHub secrets named: CHECKOUT_GITHUB_CONTENT_PAT
-      # ! - Permission: Target content repo's Content READ and Write
+      # ! - Permission: Target content repo's Content READ
       # - name: Checkout external content
       #   uses: actions/checkout@v4
       #   with:
