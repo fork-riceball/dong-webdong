@@ -35,14 +35,6 @@ export default defineConfig({
 	base: finalBase,
 	// !IMPORTANT: Set site url property with your own domain
 	site: baseUrl,
-	image: {
-		remotePatterns: [
-			{
-				protocol: "https",
-				hostname: "bucket-webdong.webdong.dev",
-			},
-		],
-	},
 	redirects: {
 		"/": `${finalBase}${defaultLocale}/`,
 		"/post/": `${finalBase}${defaultLocale}/post/`,
@@ -50,6 +42,12 @@ export default defineConfig({
 	},
 	image: {
 		service: passthroughImageService(), // Could not find Sharp: https://docs.astro.build/en/reference/errors/missing-sharp/
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "bucket-webdong.webdong.dev",
+			},
+		],
 	},
 	i18n: {
 		defaultLocale,
