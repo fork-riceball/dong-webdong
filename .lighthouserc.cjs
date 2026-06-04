@@ -6,7 +6,7 @@ module.exports = {
 			url: [
 				"http://localhost:4321/en/",
 				"http://localhost:4321/en/post",
-				"http://localhost:4321/en/post/demo-post/",
+				// "http://localhost:4321/en/post/demo-post/",
 				"http://localhost:4321/en/shortpost",
 			],
 		},
