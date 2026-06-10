@@ -7,26 +7,28 @@
 </h1>
 
 <div align="center">
-  Feature-rich blog theme that's battle tested and easy to use, Powered by astro.js v6 
+A battle-tested, feature-rich blog theme powered by Astro v6
 </div>
 
 <br />
 
 > [!TIP]
-> I've building and improving [my blog](https://www.webdong.dev/zh-tw/) for years, so i decided to make it generic theme and open source it. <br/>
-> You might be intrested in building personal site too! Check out [Letter Portfolio theme](https://github.com/riceball-tw/letter)!
+> Been building [my blog](https://www.webdong.dev/en/) for years — so I turned it into an open-source theme. <br />
+> You might be intrested in building personal site too, Check out [Letter Portfolio theme](https://github.com/riceball-tw/letter)!
+
 
 ## Key Features
 
-Start your online [posts](https://riceball-tw.github.io/dong/zh-tw/post/) or [shortposts](https://riceball-tw.github.io/dong/zh-tw/shortpost/) through fully typed markdown and settings. Check out the [GitHub Pages Demo](https://riceball-tw.github.io/dong/en/).
+Start your online [posts](https://riceball-tw.github.io/dong/en/post/) or [shortposts](https://riceball-tw.github.io/dong/en/shortpost/) through fully typed markdown and settings. Check out the [GitHub Pages Demo](https://riceball-tw.github.io/dong/en/).
 
-- Astro v6 + Tailwind v4
 - Optimize for speed (100% lighthouse score)
 - Responsive & SEO-friendly
 - Built-in i18n
-- Open Graph image generation through [vercel/og](https://vercel.com/docs/og-image-generation) with cache
-- Page search through [Pagefind](https://pagefind.app/)
-- Google Analytic
+- content
+  - Open Graph image generation through [vercel/og](https://vercel.com/docs/og-image-generation) with cache
+  - Page search through [Pagefind](https://pagefind.app/)
+  - Google Analytic
+  - Beautiful code block & Mermaid diagram using [expressive-code](https://github.com/expressive-code/expressive-code) and [remark-mermaid](https://github.com/temando/remark-mermaid)
 - CI pipeline (TypeScript / [Biome linter](https://biomejs.dev/) / [Cypress E2E testing](https://www.cypress.io/) / [Lighthouse](https://github.com/GoogleChrome/lighthouse))
 - CD pipeline ([Cloudflare Pages](https://pages.cloudflare.com/) or [GitHub Pages](https://pages.github.com/))
 
