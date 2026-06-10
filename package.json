@@ -54,7 +54,8 @@
 		"tailwindcss": "4.0.9",
 		"tailwindcss-fluid-type": "3.0.0--.beta.2",
 		"typescript": "^5.9.3",
-		"uniqolor": "^1.1.1"
+		"uniqolor": "^1.1.1",
+		"wrangler": "^4.98.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.1.3",
