@@ -156,5 +156,8 @@ export default defineConfig({
 	],
 	vite: {
 		plugins: [tailwindcss()],
+		optimizeDeps: {
+			include: ["@pagefind/default-ui"],
+		},
 	},
 });
