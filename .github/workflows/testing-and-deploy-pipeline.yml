@@ -96,7 +96,7 @@ jobs:
 
       - name: Generate OG images
         id: generate
-        uses: riceball-tw/goog@v3
+        uses: riceball-tw/goog@v3.0.2
         with:
           config: goog-config.json
           template: scripts/og-template.html
